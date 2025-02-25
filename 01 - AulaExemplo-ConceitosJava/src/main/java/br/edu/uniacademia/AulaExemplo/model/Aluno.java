@@ -17,6 +17,11 @@ public class Aluno {
         nota = 0;
         idade = 0;
     }
+    public Aluno(String nome, int idade, double nota) {
+        this.nome = nome;
+        this.idade = idade;
+        this.nota = nota;
+    }
 
     //Métodos de acesso
     public String getNome() {
