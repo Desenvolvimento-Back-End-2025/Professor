@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20f67f86-010b-4a6b-b6f5-5797fbe5ff52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/controller/AlunoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/controller/page/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/AulaExemploApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/AulaExemploApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/model/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/uniacademia/AulaExemplo/AulaExemploApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/uniacademia/AulaExemplo/AulaExemploApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/uniacademia/AulaExemplo/model/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/uniacademia/AulaExemplo/model/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/uniacademia/AulaExemplo/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.AulaExemploApplication.executor": "Debug",
+    "Spring Boot.AulaExemploApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/01 - AulaExemplo-ConceitosJava/pom.xml",
     "node.js.detected.package.eslint": "true",
@@ -58,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/view" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
@@ -89,6 +89,7 @@
       <workItem from="1740068295167" duration="1835000" />
       <workItem from="1740095555709" duration="103000" />
       <workItem from="1740095675563" duration="5234000" />
+      <workItem from="1740527812047" duration="3622000" />
     </task>
     <servers />
   </component>

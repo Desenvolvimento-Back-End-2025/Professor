@@ -7,5 +7,8 @@
 </head>
 <body>
 <h1>HOME</h1>
+<h2>nome: ${aluno.nome}</h2>
+<h2>idade: ${aluno.idade}</h2>
+<h2>nota: ${aluno.nota}</h2>
 </body>
 </html>
