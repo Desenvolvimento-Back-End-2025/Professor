@@ -3,6 +3,7 @@ package br.com.aula.produtos.ProdutosApi.resources;
 
 import br.com.aula.produtos.ProdutosApi.ProdutosApiApplication;
 import br.com.aula.produtos.ProdutosApi.model.Produto;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class ProdutoResource {
     }
 
     @PostMapping("")
-    public Produto save(@RequestBody Produto produto) {
+    public Produto save( @Valid @RequestBody Produto produto) {
         produto.setId(ProdutosApiApplication.produtos.size()+1);
         ProdutosApiApplication.produtos.add(produto);
         return produto;

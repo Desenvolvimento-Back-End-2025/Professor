@@ -1,17 +1,28 @@
 package br.com.aula.produtos.ProdutosApi.model;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.Locale;
+
 public class Produto {
     private int id;
+    @NotNull(message = "nome não pode ser nulo")
+    @NotBlank(message = "nome não pode ser vazio")
     private String nome;
     private String descricao;
+    @Min(value = 0, message = "estoque deve ser maior que zero")
     private int quantidadeEstoque;
     private int estoqueMinimo;
     private int estoqueMaximo;
     private double precoCompra;
+    @Max(value = 100, message = "O lucro não pode ser maior que 100%")
     private double lucro;
     private boolean ehImportado;
 
