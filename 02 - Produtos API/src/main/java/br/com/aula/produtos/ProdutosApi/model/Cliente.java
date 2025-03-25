@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+import java.time.chrono.ChronoPeriod;
 import java.util.ArrayList;
 
 @Data
@@ -25,5 +27,8 @@ public class Cliente {
     private ArrayList<Produto> produtos;
 
 
-
+    public int idade() {
+        LocalDate dtAtual = LocalDate.now();
+        return dtAtual.getYear() - dataNascimento.getYear();
+    }
 }
