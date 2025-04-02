@@ -21,6 +21,10 @@ public class UniAcademyApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Professor professor = new Professor(0,"Zezin","ze@ze",1000);
 		profRepo.save(professor);
+		Professor professor1 = new Professor(0,"Pedrin","ped@ped",800);
+		profRepo.save(professor1);
+		Professor professor2 = new Professor(0,"Gustin","gu@gu",800);
+		profRepo.save(professor2);
 
 	}
 }
