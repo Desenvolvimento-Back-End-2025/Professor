@@ -22,6 +22,10 @@ public class ProfessorNewDTO {
     private double salario;
 
     public Professor create() {
-        return new Professor(0,nome,email,salario);
+        Professor professor = new Professor();
+        professor.setNome(this.nome);
+        professor.setEmail(this.email);
+        professor.setSalario(this.salario);
+        return professor;
     }
 }

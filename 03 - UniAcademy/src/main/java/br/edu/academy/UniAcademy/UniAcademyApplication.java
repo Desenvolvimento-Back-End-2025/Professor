@@ -1,11 +1,17 @@
 package br.edu.academy.UniAcademy;
 
+import br.edu.academy.UniAcademy.model.Aluno;
+import br.edu.academy.UniAcademy.model.Disciplina;
 import br.edu.academy.UniAcademy.model.Professor;
+import br.edu.academy.UniAcademy.model.repository.AlunoRepository;
+import br.edu.academy.UniAcademy.model.repository.DisciplinaRepository;
 import br.edu.academy.UniAcademy.model.repository.ProfessorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
 
 @SpringBootApplication
 public class UniAcademyApplication implements CommandLineRunner {
@@ -16,15 +22,35 @@ public class UniAcademyApplication implements CommandLineRunner {
 
 	@Autowired
 	ProfessorRepository profRepo;
+	@Autowired
+	AlunoRepository aluRepo;
+	@Autowired
+	DisciplinaRepository discRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
-		Professor professor = new Professor(0,"Zezin","ze@ze",1000);
+		Professor professor = new Professor();
+		professor.setNome("PEdrin");
+		professor.setEmail("ped@ped");
+		professor.setSalario(800);
+		professor.setLogin("ped");
+		professor.setSenha("123");
 		profRepo.save(professor);
-		Professor professor1 = new Professor(0,"Pedrin","ped@ped",800);
-		profRepo.save(professor1);
-		Professor professor2 = new Professor(0,"Gustin","gu@gu",800);
-		profRepo.save(professor2);
+
+		Aluno alu = new Aluno();
+		alu.setNome("Jeffin");
+		alu.setEmail("jef@jef");
+		alu.setMatricula("123");
+		alu.setLogin("jef");
+		alu.setSenha("123");
+		aluRepo.save(alu);
+
+		Disciplina disc = new Disciplina();
+		disc.setCargaHoraria(80);
+		disc.setNome("Desenvolvimento Back end");
+		disc.setProfessores(new ArrayList<>());
+		disc.getProfessores().add(professor);
+		discRepo.save(disc);
 
 	}
 }

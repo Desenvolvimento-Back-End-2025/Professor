@@ -11,10 +11,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Professor extends Usuario {
+public class Disciplina {
 
-    private double salario;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nome;
+    private int cargaHoraria;
     @ManyToMany
-    List<Disciplina> disciplinas;
+    private List<Professor> professores;
 
 }
