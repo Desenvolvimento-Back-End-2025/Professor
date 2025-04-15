@@ -11,7 +11,6 @@ import org.hibernate.annotations.ManyToAny;
 @NoArgsConstructor
 @Entity
 public class Matricula {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,8 +22,8 @@ public class Matricula {
     private Aluno aluno;
     @ManyToOne
     private Disciplina disciplina;
-    @ManyToOne
-    private Professor professor;
+//    @ManyToOne
+//    private Professor professor;
 
 
 }

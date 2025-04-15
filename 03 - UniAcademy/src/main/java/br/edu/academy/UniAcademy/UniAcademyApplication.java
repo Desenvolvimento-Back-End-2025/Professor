@@ -2,9 +2,11 @@ package br.edu.academy.UniAcademy;
 
 import br.edu.academy.UniAcademy.model.Aluno;
 import br.edu.academy.UniAcademy.model.Disciplina;
+import br.edu.academy.UniAcademy.model.Matricula;
 import br.edu.academy.UniAcademy.model.Professor;
 import br.edu.academy.UniAcademy.model.repository.AlunoRepository;
 import br.edu.academy.UniAcademy.model.repository.DisciplinaRepository;
+import br.edu.academy.UniAcademy.model.repository.MatriculaRepository;
 import br.edu.academy.UniAcademy.model.repository.ProfessorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -26,6 +28,8 @@ public class UniAcademyApplication implements CommandLineRunner {
 	AlunoRepository aluRepo;
 	@Autowired
 	DisciplinaRepository discRepo;
+	@Autowired
+	MatriculaRepository mateRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -51,6 +55,11 @@ public class UniAcademyApplication implements CommandLineRunner {
 		disc.setProfessores(new ArrayList<>());
 		disc.getProfessores().add(professor);
 		discRepo.save(disc);
+
+		Matricula mat = new Matricula(0,2025,
+				1,10,10,alu,disc);
+//				professor);
+		mateRepo.save(mat);
 
 	}
 }

@@ -18,7 +18,7 @@ public class Disciplina {
     private int id;
     private String nome;
     private int cargaHoraria;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Professor> professores;
 
 }
