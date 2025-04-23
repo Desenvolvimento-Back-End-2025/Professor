@@ -16,5 +16,6 @@ public class Professor extends Usuario {
     private double salario;
     @ManyToMany(fetch = FetchType.LAZY)
     List<Disciplina> disciplinas;
+    private Boolean admin;
 
 }
