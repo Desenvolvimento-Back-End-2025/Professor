@@ -8,5 +8,8 @@ import java.util.List;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
+    public Aluno findByNome(String nome);
+
+    public Aluno findByLogin(String nome);
 
 }

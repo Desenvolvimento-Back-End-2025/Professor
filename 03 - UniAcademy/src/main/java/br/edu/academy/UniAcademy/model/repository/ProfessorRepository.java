@@ -9,4 +9,5 @@ public interface ProfessorRepository extends JpaRepository<Professor, Integer> {
 
     public List<Professor> findBySalarioIsGreaterThan(Double sal);
 
+    public Professor findByLogin(String login);
 }

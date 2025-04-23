@@ -1,5 +1,7 @@
 package br.edu.academy.UniAcademy.config.security;
 
+import br.edu.academy.UniAcademy.config.security.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -27,6 +29,9 @@ public class SecurityConfig {
         return  new BCryptPasswordEncoder();
     }
 
+    @Autowired
+    private UserService userService;
+
     //configurando o tipo de autenticação
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
@@ -40,6 +45,7 @@ public class SecurityConfig {
 ////                        .requestMatchers(HttpMethod.POST,"/professor").hasAuthority("CREATE_PROFESSOR")
 //                )
                 .httpBasic(Customizer.withDefaults())
+                .userDetailsService(userService)
                 .sessionManagement(sessao ->
                         sessao.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
@@ -47,23 +53,23 @@ public class SecurityConfig {
     }
 
     //Configuração da Autorização
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails professor = User.withUsername("prof")
-                .password( passwordEncoder().encode("p123") )
-                .roles("PROFESSOR")
-                .build();
-        UserDetails aluno = User.withUsername("aluno")
-                .password( passwordEncoder().encode("a123") )
-                .roles("ALUNO")
-                .build();
-        UserDetails admin = User.withUsername("admin")
-                .password( passwordEncoder().encode("ad123") )
-                .roles("ADMIN","PROFESSOR")
-                .build();
-
-        return new InMemoryUserDetailsManager(professor, aluno, admin);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        UserDetails professor = User.withUsername("prof")
+//                .password( passwordEncoder().encode("p123") )
+//                .roles("PROFESSOR")
+//                .build();
+//        UserDetails aluno = User.withUsername("aluno")
+//                .password( passwordEncoder().encode("a123") )
+//                .roles("ALUNO")
+//                .build();
+//        UserDetails admin = User.withUsername("admin")
+//                .password( passwordEncoder().encode("ad123") )
+//                .roles("ADMIN","PROFESSOR")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(professor, aluno, admin);
+//    }
 
 }
 

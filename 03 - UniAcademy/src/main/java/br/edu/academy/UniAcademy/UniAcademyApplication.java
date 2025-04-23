@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,8 @@ public class UniAcademyApplication implements CommandLineRunner {
 	DisciplinaRepository discRepo;
 	@Autowired
 	MatriculaRepository mateRepo;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -38,7 +42,8 @@ public class UniAcademyApplication implements CommandLineRunner {
 		professor.setEmail("ped@ped");
 		professor.setSalario(800);
 		professor.setLogin("ped");
-		professor.setSenha("123");
+		professor.setSenha( passwordEncoder.encode("123") );
+		professor.setAdmin(true);
 		profRepo.save(professor);
 
 		Aluno alu = new Aluno();
@@ -46,7 +51,7 @@ public class UniAcademyApplication implements CommandLineRunner {
 		alu.setEmail("jef@jef");
 		alu.setMatricula("123");
 		alu.setLogin("jef");
-		alu.setSenha("123");
+		alu.setSenha(passwordEncoder.encode("123") );
 		aluRepo.save(alu);
 
 		Disciplina disc = new Disciplina();
