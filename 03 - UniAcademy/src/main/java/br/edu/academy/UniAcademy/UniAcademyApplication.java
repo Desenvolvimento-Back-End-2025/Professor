@@ -8,6 +8,8 @@ import br.edu.academy.UniAcademy.model.repository.AlunoRepository;
 import br.edu.academy.UniAcademy.model.repository.DisciplinaRepository;
 import br.edu.academy.UniAcademy.model.repository.MatriculaRepository;
 import br.edu.academy.UniAcademy.model.repository.ProfessorRepository;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 @SpringBootApplication
 public class UniAcademyApplication implements CommandLineRunner {
@@ -37,6 +40,9 @@ public class UniAcademyApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+
+
 		Professor professor = new Professor();
 		professor.setNome("PEdrin");
 		professor.setEmail("ped@ped");
@@ -65,6 +71,7 @@ public class UniAcademyApplication implements CommandLineRunner {
 				1,10,10,alu,disc);
 //				professor);
 		mateRepo.save(mat);
+
 
 	}
 }

@@ -23,7 +23,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     ProfessorRepository prepo;
 
-    //https://dontpad.com/daves/back
     @Override
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {

@@ -1,5 +1,6 @@
 package br.edu.academy.UniAcademy.config.security;
 
+import br.edu.academy.UniAcademy.config.security.filtro.JWTSecurityFilter;
 import br.edu.academy.UniAcademy.config.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -31,6 +34,8 @@ public class SecurityConfig {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    JWTSecurityFilter jwtFilter;
 
     //configurando o tipo de autenticação
     @Bean
@@ -44,7 +49,8 @@ public class SecurityConfig {
 ////                        .requestMatchers("/admin/**").hasRole("ADMIN")
 ////                        .requestMatchers(HttpMethod.POST,"/professor").hasAuthority("CREATE_PROFESSOR")
 //                )
-                .httpBasic(Customizer.withDefaults())
+               // .httpBasic(Customizer.withDefaults())
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .userDetailsService(userService)
                 .sessionManagement(sessao ->
                         sessao.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
