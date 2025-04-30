@@ -1,6 +1,7 @@
 package br.edu.academy.UniAcademy.config.security.service;
 
 
+import br.edu.academy.UniAcademy.config.security.model.UsuarioLogado;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -24,9 +25,9 @@ public class TokenService {
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("id",  123);
-        claims.put("nome", "Zezin da Silva");
-        claims.put("email", "ze@dominio.com");
+        claims.put("id",  ((UsuarioLogado)userDetails).getId());
+        claims.put("nome", ((UsuarioLogado)userDetails).getNome());
+        claims.put("email", ((UsuarioLogado)userDetails).getEmail());
         claims.put("role", userDetails.getAuthorities().iterator().next().getAuthority());
 
         return Jwts.builder()
