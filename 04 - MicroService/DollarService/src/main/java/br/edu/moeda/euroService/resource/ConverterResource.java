@@ -30,4 +30,12 @@ public class ConverterResource {
         return ResponseEntity.ok(valorEmReal);
     }
 
+
+    @GetMapping("/{valor}/all")
+    public ResponseEntity<?> all(@PathVariable double valor){
+
+        double valor1 = service.convert(valor);
+        return ResponseEntity.ok(valor1);
+    }
+
 }
