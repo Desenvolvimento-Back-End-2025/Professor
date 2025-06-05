@@ -1,0 +1,11 @@
+br/edu/moeda/auth/config/security/service/UserService.class
+br/edu/moeda/auth/model/Usuario.class
+br/edu/moeda/AuthService/config/security/filtro/JWTSecurityFilter.class
+br/edu/moeda/auth/config/security/service/TokenService.class
+br/edu/moeda/AuthService/service/UsuarioService.class
+br/edu/moeda/auth/AuthApplication.class
+br/edu/moeda/AuthService/config/security/SecurityConfig.class
+br/edu/moeda/auth/config/security/model/UsuarioLogado.class
+br/edu/moeda/auth/resource/AuthResource.class
+br/edu/moeda/auth/service/dto/LoginDTO.class
+br/edu/moeda/auth/model/repository/UsuarioRepository.class

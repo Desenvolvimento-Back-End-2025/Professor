@@ -1,0 +1,11 @@
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/resource/AuthResource.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/config/security/service/UserService.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/AuthApplication.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/config/security/filtro/JWTSecurityFilter.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/service/dto/LoginDTO.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/model/repository/UsuarioRepository.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/config/security/SecurityConfig.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/config/security/model/UsuarioLogado.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/model/Usuario.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/config/security/service/TokenService.java
+/home/daves/Projetos/Aula/2025-1/back/Prof/Professor/04 - MicroService/auth-service/src/main/java/br/edu/moeda/auth/service/UsuarioService.java
