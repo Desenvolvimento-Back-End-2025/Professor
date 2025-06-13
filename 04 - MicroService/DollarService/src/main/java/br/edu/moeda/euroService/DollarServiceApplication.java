@@ -15,10 +15,5 @@ public class DollarServiceApplication {
 		SpringApplication.run(DollarServiceApplication.class, args);
 	}
 
-	@Bean
-	@LoadBalanced
-	public RestTemplate rest(){
-		return new RestTemplate();
-	}
 
 }

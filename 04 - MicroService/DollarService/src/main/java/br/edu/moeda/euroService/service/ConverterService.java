@@ -2,6 +2,7 @@ package br.edu.moeda.euroService.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -20,12 +21,18 @@ public class ConverterService {
 
     @Autowired
     RestTemplate rest;
+    @Autowired
+    @Qualifier("restTemplateMock")
+    RestTemplate restMock;
 
     public double convert(double valor) {
         double valor1 = rest.getForEntity("http://EUROSERVICE/euro/"+valor+"/dollar",
                 Double.class).getBody();
 
-        return valor1;
+        double valor2 = restMock.getForEntity("http://EUROSERVICE/teste",
+                Double.class).getBody();
+
+        return valor1 + valor2;
     }
 
     public double convertToEuro(double valor) {
